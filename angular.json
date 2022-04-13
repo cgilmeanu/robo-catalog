@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "domain": "libs/domain",
     "robo-catalog": "apps/robo-catalog",
     "robo-catalog-e2e": "apps/robo-catalog-e2e"
   }

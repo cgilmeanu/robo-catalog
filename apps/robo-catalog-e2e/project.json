@@ -1,0 +1,28 @@
+{
+  "root": "apps/robo-catalog-e2e",
+  "sourceRoot": "apps/robo-catalog-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/robo-catalog-e2e/cypress.json",
+        "devServerTarget": "robo-catalog:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "robo-catalog:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/robo-catalog-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["robo-catalog"]
+}

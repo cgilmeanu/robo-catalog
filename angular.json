@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "robo-catalog": "apps/robo-catalog",
+    "robo-catalog-e2e": "apps/robo-catalog-e2e"
+  }
+}

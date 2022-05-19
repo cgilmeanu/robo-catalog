@@ -1,0 +1,7 @@
+<ng-container *ngrxLet="robots$ as robots">
+  <div class="card-list">
+    <ng-container *ngFor="let robot of robots">
+      <robo-catalog-card [robot]="robot"></robo-catalog-card>
+    </ng-container>
+  </div>
+</ng-container>

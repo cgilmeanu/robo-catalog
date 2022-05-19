@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { DataModule } from '@robo/data';
+import { FeatureCatalogModule } from '@robo/feature-catalog';
 
 import { AppComponent } from './app.component';
-import { NxWelcomeComponent } from './nx-welcome.component';
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent],
-  imports: [BrowserModule],
+  declarations: [AppComponent],
+  imports: [BrowserModule, DataModule, FeatureCatalogModule],
   providers: [],
   bootstrap: [AppComponent],
 })

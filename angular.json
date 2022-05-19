@@ -1,7 +1,9 @@
 {
   "version": 2,
   "projects": {
+    "data": "libs/data",
     "domain": "libs/domain",
+    "feature-catalog": "libs/feature-catalog",
     "robo-catalog": "apps/robo-catalog",
     "robo-catalog-e2e": "apps/robo-catalog-e2e"
   }

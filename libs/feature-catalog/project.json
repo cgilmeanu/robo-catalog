@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/feature-catalog",
+  "sourceRoot": "libs/feature-catalog/src",
+  "prefix": "robo-catalog",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/feature-catalog"],
+      "options": {
+        "project": "libs/feature-catalog/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/feature-catalog/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/feature-catalog/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/feature-catalog"],
+      "options": {
+        "jestConfig": "libs/feature-catalog/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/feature-catalog/src/**/*.ts",
+          "libs/feature-catalog/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:robo", "type:feature"]
+}

@@ -13,8 +13,24 @@
             "allow": [],
             "depConstraints": [
               {
-                "sourceTag": "*",
+                "sourceTag": "scope:app",
                 "onlyDependOnLibsWithTags": ["*"]
+              },
+              {
+                "sourceTag": "type: shell",
+                "onlyDependOnLibsWithTags": [
+                  "type:feature",
+                  "type:infrastructure",
+                  "type:domain"
+                ]
+              },
+              {
+                "sourceTag": "type:infrastructure",
+                "onlyDependOnLibsWithTags": ["type:feature", "type:domain"]
+              },
+              {
+                "sourceTag": "type:feature",
+                "onlyDependOnLibsWithTags": ["type:domain"]
               }
             ]
           }

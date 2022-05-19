@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@robo/domain": ["libs/domain/src/index.ts"]
+      "@robo/data": ["libs/data/src/index.ts"],
+      "@robo/domain": ["libs/domain/src/index.ts"],
+      "@robo/feature-catalog": ["libs/feature-catalog/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
